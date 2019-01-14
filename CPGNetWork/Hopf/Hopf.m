@@ -39,3 +39,4 @@ xlabel('t/s'); ylabel('Output x y');
 title('HopfÕñµ´Æ÷Êä³ö');
 hold on;
 plot(t,x(:, 2));
+legend('x','y');

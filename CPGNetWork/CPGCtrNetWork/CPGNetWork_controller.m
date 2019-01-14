@@ -10,7 +10,7 @@ phi = 1;                        %关节类型,1代表肘式,-1代表膝式
 beta=0.5;                       %负载因子，表示支撑相所占比例
 omiga_sw=4/(beta*T);            %摆动相频率
 h = 0.02;                       %摆动腿足端高度  m
-phiRB=0; phiLB=0.5;             %RB LB相位, 与beta一同决定步态
+phiRB=0.; phiLB=0.5;             %RB LB相位, 与beta一同决定步态
 Ak = acos((l*cos(theta0)-h)/l)-theta0;       %髋关节幅值
 Ah = asin((beta*v*T)/(4*l/cos(theta0)));     %膝关节幅值
 %振荡器参数
@@ -58,13 +58,13 @@ plot(t,x(:, 4));
 
 subplot(4,1,3);
 plot(t,x(:, 5));
-xlabel('t/s'); ylabel('RB');
+xlabel('t/s'); ylabel('RH');
 hold on;
 plot(t,x(:, 6));
 
 subplot(4,1,4);
 plot(t,x(:, 7));
-xlabel('t/s'); ylabel('LB');
+xlabel('t/s'); ylabel('LH');
 hold on;
 plot(t,x(:, 8));
 legend('hip-pitch','knee');
